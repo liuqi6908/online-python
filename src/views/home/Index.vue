@@ -50,6 +50,8 @@ const list = reactive([]);
 
 const $router = new useRouter();
 
+let title;
+
 /** 跳转页面 */
 function jumpRun(item) {
   $router.push({
@@ -99,6 +101,7 @@ function openEdit(id) {
   });
   nextTick(() => {
     const input = document.getElementById("input");
+    title = input.value;
     input.focus();
   });
 }
@@ -106,6 +109,10 @@ function openEdit(id) {
 /** 更新会话记录 */
 function updateItem(item) {
   item.edit = false;
+  if (!item.title || item.title === title) {
+    item.title = title;
+    return;
+  }
   localStorage.setItem("data", JSON.stringify(list));
   ElMessage({
     type: "success",
