@@ -1,7 +1,10 @@
-# Vue 3 + Vite
+# 在线 Python
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+基于 `pyodide` 技术实现的在线运行 Python 案例。
 
-## Recommended IDE Setup
+## 功能
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- 模拟 PyCharm，在代码编辑器中输入代码，运行之后在控制台查看运行结果
+- 模拟 控制台，在控制台中交互式运行 python 语句
+- 保存、编辑、删除 会话记录
+- 加载 pyodide 内置的第三方包
